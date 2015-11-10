@@ -1,13 +1,12 @@
-body {
-  font-family: "Open Sans";
+body, footer {
+  font-family: "Open Sans", "sans-serif";
+  color: #2D5C96;
 }
-
-
 
 .banner-image {
   background-image: url(/images/c_digital_world.jpg);
   background-size: cover;
-  height: 300px;
+  height: 240px;
 }
 
 .navbar {
@@ -16,7 +15,8 @@ body {
 }
 
 .navbar-inverse {
-  background-color: #001E44;
+  background-color: #2D5C96;
+  border-color: #2D5C96;
   color: powderblue;
 }
 
