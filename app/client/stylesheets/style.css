@@ -2,10 +2,7 @@ body {
   font-family: "Open Sans";
 }
 
-.navbar-inverse .navbar-nav>li>a {
-  color: powderblue;
-  font-size: 20px;
-}
+
 
 .banner-image {
   background-image: url(/images/c_digital_world.jpg);
@@ -20,6 +17,15 @@ body {
 
 .navbar-inverse {
   background-color: #001E44;
+  color: powderblue;
+}
+
+.navbar-inverse .navbar-brand{
+  color: powderblue;
+}
+
+.navbar-inverse a {
+  color: powderblue;
 }
 
 .table {
