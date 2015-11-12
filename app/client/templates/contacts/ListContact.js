@@ -1,9 +1,9 @@
-Template.ListStuff.helpers({
+Template.ListContact.helpers({
 
   /**
    * @returns {*} All of the Contact documents.
    */
-  stuffList: function () {
+  contactList: function () {
     return Contact.find();
   }
 });

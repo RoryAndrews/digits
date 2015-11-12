@@ -15,15 +15,15 @@ Router.route('/', {
 });
 
 Router.route('/list', {
-  name: 'ListStuff'
+  name: 'ListContact'
 });
 
 Router.route('/add', {
-  name: 'AddStuff'
+  name: 'AddContact'
 });
 
 
 Router.route('/contact/:_id', {
-  name: 'EditStuff',
+  name: 'EditContact',
   data: function() { return Contact.findOne(this.params._id); }
 });
