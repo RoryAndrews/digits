@@ -1,59 +1,90 @@
-stuff = "Stuff";  // avoid typos, this string occurs many times.
+contact = "Contact";  // avoid typos, this string occurs many times.
 
-Stuff = new Mongo.Collection(stuff);
+Contact = new Mongo.Collection(contact);
 
 Meteor.methods({
   /**
-   * Invoked by AutoForm to add a new Stuff record.
-   * @param doc The Stuff document.
+   * Invoked by AutoForm to add a new Contact record.
+   * @param doc The Contact document.
    */
-  addStuff: function(doc) {
-    check(doc, Stuff.simpleSchema());
-    Stuff.insert(doc);
+  addContact: function(doc) {
+    check(doc, Contact.simpleSchema());
+    Contact.insert(doc);
   },
   /**
    *
-   * Invoked by AutoForm to update a Stuff record.
-   * @param doc The Stuff document.
+   * Invoked by AutoForm to update a Contact record.
+   * @param doc The Contact document.
    * @param docID It's ID.
    */
-  editStuff: function(doc, docID) {
-    check(doc, Stuff.simpleSchema());
-    Stuff.update({_id: docID}, doc);
+  editContact: function(doc, docID) {
+    check(doc, Contact.simpleSchema());
+    Contact.update({_id: docID}, doc);
   }
 });
 
 // Publish the entire Collection.  Subscription performed in the router.
 if (Meteor.isServer) {
-  Meteor.publish(stuff, function () {
-    return Stuff.find();
+  Meteor.publish(contact, function () {
+    return Contact.find();
   });
 }
 
 
 /**
- * Create the schema for Stuff
+ * Create the schema for Contact
  * See: https://github.com/aldeed/meteor-autoform#common-questions
  * See: https://github.com/aldeed/meteor-autoform#affieldinput
  */
-Stuff.attachSchema(new SimpleSchema({
-  name: {
-    label: "Name",
+Contact.attachSchema(new SimpleSchema({
+  first: {
+    label: "First",
     type: String,
     optional: false,
     max: 20,
     autoform: {
-      group: stuff,
-      placeholder: "Bicycle"
+      group: contact,
+      placeholder: "First name"
     }
   },
-  quantity: {
-    label: "Quantity",
-    type: Number,
+  last: {
+    label: "Last",
+    type: String,
     optional: false,
+    max: 20,
     autoform: {
-      group: stuff,
-      placeholder: "3"
+      group: contact,
+      placeholder: "Last name"
+    }
+  },
+  address: {
+    label: "Address",
+    type: String,
+    optional: false,
+    max: 20,
+    autoform: {
+      group: contact,
+      placeholder: "Address"
+    }
+  },
+  phone: {
+    label: "Phone",
+    type: String,
+    optional: false,
+    max: 20,
+    autoform: {
+      group: contact,
+      placeholder: "xxx-xxx-xxxx"
+    }
+  },
+  email: {
+    label: "Email",
+    type: String,
+    optional: false,
+    max: 20,
+    autoform: {
+      group: contact,
+      placeholder: "name@example.com"
     }
   }
 }));

@@ -2,16 +2,16 @@
  * A list of Stuff to pre-fill the Collection.
  * @type {*[]}
  */
-var stuffSeeds = [
+var contactSeeds = [
   {name: "Basket", quantity: 3},
   {name: "Bicycle", quantity: 2}
 ];
 
 /**
- * Initialize the Stuff collection if empty with seed data.
+ * Initialize the Contact collection if empty with seed data.
  */
-if (Stuff.find().count() === 0) {
+if (Contact.find().count() === 0) {
   _.each(stuffSeeds,  function(stuff) {
-    Stuff.insert(stuff);
+    Contact.insert(contact);
   });
 }
