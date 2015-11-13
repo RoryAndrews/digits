@@ -19,14 +19,14 @@ These files setup the the initial user accounts.
 # Screenshots
 
 Home page:
-![](url=https://raw.githubusercontent.com/RoryAndrews/digits/qa-1/doc/homepage.png)
+![](https://raw.githubusercontent.com/RoryAndrews/digits/qa-1/doc/homepage.png)
 
 Add page:
-![](url=https://raw.githubusercontent.com/RoryAndrews/digits/qa-1/doc/addpage.png)
+![](https://raw.githubusercontent.com/RoryAndrews/digits/qa-1/doc/addpage.png)
 
 List page:
-![](url=https://raw.githubusercontent.com/RoryAndrews/digits/qa-1/doc/listpage.png)
+![](https://raw.githubusercontent.com/RoryAndrews/digits/qa-1/doc/listpage.png)
 
 #Credits
 
-Used [meteor-application-template](url=http://ics-software-engineering.github.io/meteor-application-template/) as the base.
+Used [meteor-application-template](http://ics-software-engineering.github.io/meteor-application-template/) as the base.
